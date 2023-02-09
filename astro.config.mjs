@@ -1,23 +1,27 @@
-// https://astro.build/config
-import netlify from "@astrojs/netlify/functions";
 import { defineConfig } from "astro/config";
 import storyblok from "@storyblok/astro";
+import tailwind from "@astrojs/tailwind";
+import netlify from "@astrojs/netlify/functions";
 
-// https://astro.build/config
 export default defineConfig({
+  output: "server",
+  adapter: netlify(),
   integrations: [
     storyblok({
-      accessToken: "TVd6QLQct84fnJSH6cedyAtt",
+      accessToken: "LSTMzttTLabrQLn9YBzQowtt",
+      bridge: true,
+      apiOptions: {
+        region: "us",
+      },
       components: {
         page: "storyblok/Page",
-	      feature: "storyblok/Feature",
-	      grid: "storyblok/Grid",
-	      teaser: "storyblok/Teaser",
-      }
+        feature: "storyblok/Feature",
+        grid: "storyblok/Grid",
+        teaser: "storyblok/Teaser",
+      },
     }),
+    tailwind(),
   ],
-  output: "server",
-  adapter: netlify()
 });
 
 
