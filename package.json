@@ -12,6 +12,7 @@
   },
   "dependencies": {
     "@astrojs/netlify": "^2.1.2",
+    "@storyblok/astro": "^2.0.5",
     "astro": "^2.0.9"
   }
 }
