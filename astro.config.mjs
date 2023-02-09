@@ -8,7 +8,7 @@ export default defineConfig({
   adapter: netlify(),
   integrations: [
     storyblok({
-      accessToken: "LSTMzttTLabrQLn9YBzQowtt",
+      accessToken: "TVd6QLQct84fnJSH6cedyAtt",
       bridge: true,
       apiOptions: {
         region: "us",
